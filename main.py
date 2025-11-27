@@ -13,7 +13,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-interpreter = tf.lite.Interpreter(model_path="model.tflite")
+interpreter = tf.lite.Interpreter(model_path="queue_model.tflite")
 interpreter.allocate_tensors()
 
 input_details = interpreter.get_input_details()
